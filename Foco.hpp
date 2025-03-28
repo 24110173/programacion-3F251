@@ -1,22 +1,27 @@
+#pragma once
+
 class Foco
 {
 private:
-bool estadoActual;
+bool encendido;
 public:
 Foco() {
-    estadoActual = false;
+    encendido = false;
 }
 void Encender()
 {
-    estadoActual = true;
+    encendido = true;
 }
 void Apagar()
 {
-estadoActual = false;
+encender = false;
 }
-bool LeerEstado()
+char LeerEstado()
 {
-    return estadoActual;
+    if (encendido)
+    return "*";
+    else
+    return "o";
 }
 
 };
