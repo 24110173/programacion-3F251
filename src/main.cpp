@@ -1,6 +1,5 @@
-#include <iostream>
-#include "Foco.hpp"
 #include "Serie.hpp"
+#include <iostream>
 #include <ftxui/dom/elements.hpp>
 #include <ftxui/screen/screen.hpp>
 
@@ -10,12 +9,10 @@ int main(int argc, char const *argv[])
 {
     Screen pantalla = Screen::Create(
         Dimension::Full(),
-        Dimension::Full()
-    )
+        Dimension::Full());
 
     auto document = hbox((
-        vbox(sprimer(1,1))
-    ));
+        vbox(spinner(1, 1))));
 
     ftxui::Render(pantalla, document);
 
